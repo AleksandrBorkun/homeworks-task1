@@ -4,31 +4,13 @@ import java.util.Arrays;
 
 public class Calculate {
 
-	private static int[] mixFirstToLast(int startArray[]) {
+	MatrixCostruct mCon = new MatrixCostruct();
+	private int arr[];
+
+	public int[][] showTheMatrix(int[] startArray) {
 
 		int count = 0;
-		int newEnd = 0;
-
-		for (int i = 0; i < startArray.length - 1; i++) {
-
-			if (count == 0) {
-				newEnd = startArray[0];
-				count++;
-			}
-			startArray[i] = startArray[i + 1];
-			if (i == startArray.length - 2) {
-				startArray[startArray.length - 1] = newEnd;
-
-			}
-
-		}
-		return startArray;
-	}
-
-	public static void showTheMatrix(int[] startArray) {
-
-		int count = 0;
-		int arr2[][] = new int[startArray.length][];
+		int arr2[][] = new int[startArray.length][startArray.length];
 
 		for (int i = 1; i < startArray.length; i++) {
 
@@ -39,15 +21,17 @@ public class Calculate {
 			}
 
 			if (i != 1) {
-				arr2[i] = Calculate.mixFirstToLast(arr2[i - 1]);
+				
+				arr = mCon.mixFirstToLast(arr2[i - 1]);
+				arr2[i] = arr;
 				System.out.println(Arrays.toString(arr2[i]));
 				continue;
 			}
 
-			arr2[i] = Calculate.mixFirstToLast(startArray);
+			arr2[i] = mCon.mixFirstToLast(startArray);
 			System.out.println(Arrays.toString(arr2[i]));
 		}
-		return;
+		return arr2;
 	}
 
 }

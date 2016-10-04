@@ -6,9 +6,11 @@ import epam.homework.task1.workingWithArrays.RandomArrays;
 
 public class sortShella {
 
-	public static void printResult(int arrayLength, int maxValue) {
+	private int [] array;
+	
+	public void printResult(int [] array) {
 
-		int array[] = RandomArrays.createIntArray(arrayLength, maxValue);
+		this.array = array;
 
 		System.out.println("The generation array is: " + Arrays.toString(array));
 		System.out.println(Calculate.sort(array));

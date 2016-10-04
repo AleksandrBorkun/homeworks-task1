@@ -1,12 +1,20 @@
 package epam.homework.task1.matrix;
 
+import java.util.Arrays;
+
+import epam.homework.task1.workingWithArrays.RandomArraysNonStatic;
+
 public class Matrix {
 
-	static int startArray[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	public void pleaseShow() {
 
-	public static void pleaseShow() {
+		RandomArraysNonStatic arr1 = new RandomArraysNonStatic();
+		Calculate cal = new Calculate();
 
-		Calculate.showTheMatrix(startArray);
+		int array[][] = cal.showTheMatrix(arr1.createIntArray(10, 100));
+
+		for (int i = 0; i < array.length; i++)
+			System.out.println(Arrays.toString(array[i]));
 
 		return;
 	}

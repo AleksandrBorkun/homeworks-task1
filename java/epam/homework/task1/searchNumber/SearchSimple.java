@@ -1,5 +1,6 @@
 package epam.homework.task1.searchNumber;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import epam.homework.task1.workingWithArrays.RandomArrays;
