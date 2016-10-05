@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class Demo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 Tangens tan = new Tangens();
-		double arr [][] = tan.calculate(20, -10, -2);
+		double arr [][] = tan.calculate(20, 30, 4);
 
 	
 

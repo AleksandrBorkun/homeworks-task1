@@ -1,22 +1,31 @@
 package epam.homework.task1.matrix;
 
-import java.util.Arrays;
-
-import epam.homework.task1.workingWithArrays.RandomArraysNonStatic;
-
 public class Matrix {
 
-	public void pleaseShow() {
+	//private int mas[];
 
-		RandomArraysNonStatic arr1 = new RandomArraysNonStatic();
-		Calculate cal = new Calculate();
+	public int[][] buildTheMatrix(int[] mas) throws Exception {
 
-		int array[][] = cal.showTheMatrix(arr1.createIntArray(10, 100));
+		MatrixCostruct costruct = new MatrixCostruct();
 
-		for (int i = 0; i < array.length; i++)
-			System.out.println(Arrays.toString(array[i]));
+		//this.mas = mas;
+		if (mas.length == 0 || mas.length == 1)
+			throw new Exception("The length can't be ZERO OR ONE!!");
 
-		return;
+		int array[][] = new int[mas.length][mas.length];
+		int count = 0;
+		for (int i = 1; i < array.length; i++) {
+			if (count == 0) {
+				for (int j = 0; j < array[0].length; j++)
+					array[0][j] = mas[j];
+				count++;
+			}
+			costruct.mixFirstToLast(mas);
+			for (int j = 0; j < mas.length; j++)
+				array[i][j] = mas[j];
+		}
+
+		return array;
 	}
 
 }

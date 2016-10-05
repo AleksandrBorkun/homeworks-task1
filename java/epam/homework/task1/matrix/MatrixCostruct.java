@@ -1,7 +1,7 @@
 package epam.homework.task1.matrix;
 
 public class MatrixCostruct {
-	
+
 	public int[] mixFirstToLast(int startArray[]) {
 
 		int count = 0;

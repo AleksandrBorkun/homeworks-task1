@@ -2,7 +2,7 @@ package epam.homework.task1.trigonometricExample;
 
 public class Example {
 
-	public static double showResult(double x, double y) {
+	public double showResult(double x, double y) {
 
 		double result;
 

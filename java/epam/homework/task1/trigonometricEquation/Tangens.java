@@ -8,13 +8,17 @@ public class Tangens {
 	private int massivLength;
 	private double stepRes;
 	
-	public double[][] calculate(double startPoint, double finishPoint, int step) {
+	public double[][] calculate(double startPoint, double finishPoint, int step) throws Exception {
 		
 		if (startPoint >= finishPoint && step >= 0) {
-			System.out.println("");
+			throw new Exception("Error! Some data make calculate infinity. Pls check, and change it");
 		} else if (step == 0) {
-			System.out.println("");
-		} else {
+			throw new Exception("Step can\'t be zero! Pls change it");
+		} 
+		else if(startPoint<=finishPoint && step<=0){
+			throw new Exception("Error! Some data make calculate infinity. Pls check, and change it");
+		}
+			else {
 
 		massivLength = (int)abs((finishPoint-startPoint)/step) + 1;
 		resultMassiv = new double [massivLength] [2];

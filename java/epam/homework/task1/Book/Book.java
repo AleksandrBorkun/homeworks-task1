@@ -12,7 +12,7 @@ public class Book implements Cloneable, Comparable<Object> {
 
 	private int isbn;
 
-	public Book(String title, String author, int price, int edition, int isbn) {
+	public Book(String title, String author, int edition, int isbn) {
 
 		this.title = title;
 
@@ -29,7 +29,7 @@ public class Book implements Cloneable, Comparable<Object> {
 
 	public String toString() {
 
-		return "name = " + getClass() + " title = " + title + " by author " + author + ". The price is " + price;
+		return title + " by author " + author;
 
 	}
 
@@ -52,7 +52,6 @@ public class Book implements Cloneable, Comparable<Object> {
 	@Override
 
 	public int hashCode() {
-
 		return 17 + 55 * edition;
 
 	}
@@ -78,5 +77,13 @@ public class Book implements Cloneable, Comparable<Object> {
 
 	public int getIsbn() {
 		return isbn;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
 	}
 }

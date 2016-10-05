@@ -4,26 +4,16 @@ import java.util.Arrays;
 
 import epam.homework.task1.workingWithArrays.RandomArrays;
 
-public class sortShella {
+public class SortShella {
 
-	private int [] array;
-	
-	public void printResult(int [] array) {
+	public static void main(String args[]) throws Exception{
+		
 
-		this.array = array;
+		int array[] = RandomArrays.createIntArray(10, 100);
 
 		System.out.println("The generation array is: " + Arrays.toString(array));
-		System.out.println(Calculate.sort(array));
-		return;
+		System.out.println("The sort array is: " + "\t " +Arrays.toString(Calculate.sort(array)));
+
 
 	}
-
-	public static int[] getSortArray(int arrayLength, int maxValue) {
-
-		int array[] = RandomArrays.createIntArray(arrayLength, maxValue);
-
-		return Calculate.sort(array);
-
-	}
-
 }

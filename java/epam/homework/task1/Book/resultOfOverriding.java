@@ -6,10 +6,10 @@ public class resultOfOverriding {
 
 	public static void main(String args[]) throws CloneNotSupportedException {
 
-		// Вводим значения в порядке : title : author : price : edition
+		// Вводим значения в порядке : title : author : edition : isbn
 
-		Book book = new Book("Title", "Name Surname", 200, 2012, 8);
-		Book otherBook = new Book("New Title", "Strange Name", 50, 2010, 5);
+		Book book = new Book("Title", "Name Surname", 2012, 8);
+		Book otherBook = new Book("New Title", "Strange Name", 2010, 5);
 
 		Book cloneBook = book.clone();
 
@@ -19,7 +19,7 @@ public class resultOfOverriding {
 		TreeSet<Book> list = new TreeSet<Book>();
 		list.add(book);
 		list.add(otherBook);
-		list.add(new Book("blabla", "nanananana", 210, 1026, 1));
+		list.add(new Book("blabla", "nanananana", 1026, 1));
 
 		for (Book e : list) {
 			System.out.println(e.toString() + ". ISBN = " + e.getIsbn());
