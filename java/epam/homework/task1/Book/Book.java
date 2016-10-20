@@ -18,7 +18,7 @@ public class Book implements Cloneable, Comparable<Object> {
 
 		this.author = author;
 
-		this.price = price;
+//		this.price = price;
 
 		this.edition = edition;
 
@@ -52,10 +52,11 @@ public class Book implements Cloneable, Comparable<Object> {
 	@Override
 
 	public int hashCode() {
-		return 17 + 55 * edition;
+		return 17 + 31 * edition;
 
 	}
 
+	@Override
 	public Book clone() throws CloneNotSupportedException {
 
 		Book cloneBook = (Book) super.clone();
@@ -63,6 +64,7 @@ public class Book implements Cloneable, Comparable<Object> {
 
 	}
 
+	@Override
 	public int compareTo(Object obj) {
 
 		Book entry = (Book) obj;
